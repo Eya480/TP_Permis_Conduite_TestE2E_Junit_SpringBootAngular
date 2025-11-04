@@ -15,7 +15,7 @@ public class AuthService {
     private UserRepository userRepository;
 
     private static final int MAX_ATTEMPTS = 3;
-    private static final int LOCK_TIME_MINUTES = 30;
+    private static final int LOCK_TIME_MINUTES = 1;
 
     public AuthResponse authenticate(String username, String password) {
         Optional<User> userOpt = userRepository.findByUsername(username);
